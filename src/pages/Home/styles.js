@@ -10,5 +10,5 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-    
+    color: white;
 `

@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from "react";
+import React,{ useState} from "react";
 import { Container } from "./styles";
 import { FaBars } from "react-icons/fa";
 import Sidebar from "../Sidebar";

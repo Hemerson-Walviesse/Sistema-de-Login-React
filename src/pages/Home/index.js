@@ -1,26 +1,31 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import Button from "../../components/Button";
-import useAuth from "../../hooks/useAuth";
 import * as C from './styles';
 import Header from "../../components/Header"
 
-const Home = () =>{
-
-    const { signout} = useAuth();
-    const navigate = useNavigate();
+const Home = () => {
 
     return (
         <>
-        <Header />
-         <C.Container>
-            <C.Title>HOME</C.Title>
-            <Button Text="Sair" onClick={()=> [signout(), navigate("/")]}>
-                Sair
-            </Button>
-        </C.Container>
+            <Header />
+            <C.Container>
+                <C.Title>Painel do Sistema</C.Title>
+                <C.DashboardGrid>
+                    <C.Card>
+                        <C.CardTitle>Chamados Abertos</C.CardTitle>
+                        <C.CardValue color="#e74c3c">12</C.CardValue>
+                    </C.Card>
+                    <C.Card>
+                        <C.CardTitle>Em Andamento</C.CardTitle>
+                        <C.CardValue color="#f39c12">5</C.CardValue>
+                    </C.Card>
+                    <C.Card>
+                        <C.CardTitle>Resolvidos Hoje</C.CardTitle>
+                        <C.CardValue color="#2ecc71">28</C.CardValue>
+                    </C.Card>
+                </C.DashboardGrid>
+            </C.Container>
         </>
-       
+
     );
 };
 

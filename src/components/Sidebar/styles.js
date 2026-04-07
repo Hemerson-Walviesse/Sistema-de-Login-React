@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background-color: #171923;
+    background-color: rgba(23, 25, 35, 0.95);
+    backdrop-filter: blur(8px);
     position: fixed;
     height: 100%;
     top: 0px;
     width: 300px;
+    z-index: 100;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.5);
     left: ${props => props.sidebar ? "0" : "-100%"};
     animation: showSidebar .4s;
     

@@ -97,6 +97,75 @@ export const ActionButton = styled.button`
   }
 `;
 
+export const EditButton = styled(ActionButton)`
+  background-color: #f39c12;
+  &:hover {
+    background-color: #d68910;
+  }
+`;
+
+export const DeleteButton = styled(ActionButton)`
+  background-color: #e74c3c;
+  &:hover {
+    background-color: #c0392b;
+  }
+`;
+
+export const ActionGroup = styled.div`
+  display: flex;
+  gap: 8px;
+`;
+
+export const SelectStatus = styled.select`
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #1A202C;
+  color: white;
+  border: 1px solid #2D3748;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+`;
+
+export const Input = styled.input`
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #2D3748;
+  background-color: #1A202C;
+  color: white;
+  font-size: 16px;
+  outline: none;
+
+  &:focus {
+    border-color: #3498db;
+  }
+`;
+
+export const TextArea = styled.textarea`
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #2D3748;
+  background-color: #1A202C;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  resize: vertical;
+  min-height: 100px;
+
+  &:focus {
+    border-color: #3498db;
+  }
+`;
+
 export const Modal = styled.div`
   position: fixed;
   top: 0;

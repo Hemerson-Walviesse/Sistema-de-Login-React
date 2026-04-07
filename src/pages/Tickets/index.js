@@ -3,12 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
 import * as C from "./styles";
 
-const mockTickets = [
-    { id: "1001", client: "Empresa XPTO", subject: "Sistema fora do ar", date: "06/04/2026", status: "Aberto", description: "Todos os computadores da empresa não acessam o servidor principal desde as 8h da manhã." },
-    { id: "1002", client: "João Silva", subject: "Dúvida sobre fatura", date: "05/04/2026", status: "Em Andamento", description: "Cliente relata que o valor da fatura de março veio divergente do contrato." },
-    { id: "1003", client: "Maria Souza", subject: "Troca de senha", date: "04/04/2026", status: "Resolvido", description: "Solicitação para resetar a senha do portal de compras." },
-    { id: "1004", client: "Supermercado Alfa", subject: "Relatório com erro", date: "03/04/2026", status: "Resolvido", description: "O relatório mensal de vendas não está carregando os dados corretos nos PDFs." },
-];
+
 
 const Tickets = () => {
     const navigate = useNavigate();
@@ -18,11 +13,8 @@ const Tickets = () => {
 
     useEffect(() => {
         const storedTickets = JSON.parse(localStorage.getItem('tickets_db'));
-        if (storedTickets && storedTickets.length > 0) {
+        if (storedTickets) {
             setTickets(storedTickets);
-        } else {
-            setTickets(mockTickets);
-            localStorage.setItem('tickets_db', JSON.stringify(mockTickets));
         }
     }, []);
 
